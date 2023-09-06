@@ -11,18 +11,7 @@
   </head>
 
   <body>
-    <header id="header">
-      <%  if logged_in? %>
-      <div>
-        <strong><%= "#{current_user.name}さんがログイン中" %></strong>
-        <%= link_to "Log Out", logout_path, data: { "turbo-method": :delete } %>
-      </div>
-      <% else %>
-        <div>
-        <%= link_to "Log in", login_path %>
-      </div>
-      <% end %>
-    </header>
+    <%= render 'layouts/header' %>
     <div class="container">
       <ul class="flash">
         <% flash.each do |type, msg| %>
