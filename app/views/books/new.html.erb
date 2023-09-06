@@ -1,6 +1,6 @@
 
 
-<%= form_with model: @book do |f| %>
-  <%= f.text_field :isbn %>
+<%= form_with model: @book, class: "isbn-input"  do |f| %>
+  <%= f.text_field :isbn%>
   <%= f.submit %>
 <% end %>
