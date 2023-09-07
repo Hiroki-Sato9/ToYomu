@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
   has_many :goals
+  has_many :books, through: :goals
 
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ?

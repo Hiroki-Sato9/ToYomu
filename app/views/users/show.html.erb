@@ -1,1 +1,13 @@
 <%= @user.name %>, <%= @user.email %>
+
+<h3>この人が今呼んでる本</h3>
+<% if !@goals.empty? %>
+  <ul>
+    <% @goals.each do |goal| %>
+    <li>
+      <%= Book.find(goal.book_id).title %>
+      <%= goal.date %>
+    </li>
+  <% end %>
+  </ul>
+<% end %>

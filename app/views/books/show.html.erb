@@ -2,3 +2,25 @@
 <h2><%= @book.title %></h2>
 <h3><%= @book.author %></h3>
 <p><%= @book.isbn %></p>
+
+
+
+<% if !current_user.nil? %>
+  <% if @now_reading %>
+    <p>あなたはもうこの本を読み始めています</p>
+  <% else %>
+    <%= link_to "この本を読み始める", '#', class: "button" %>
+  <% end %>
+<% end %>
+
+<h4>この人たちがこの本を読んでます</h4>
+<% if !@goals.empty? %>
+  <% @goals.each do |goal|%>
+  <ul>
+    <li>
+      <%= User.find(goal.user_id).name %>|
+      <%= goal.date %>
+    </li>
+  </ul>
+  <% end %>
+<% end %>
