@@ -1,4 +1,5 @@
 class GoalsController < ApplicationController
+  before_action :logged_in_user
   def new
     @goal = Goal.new
   end
