@@ -21,7 +21,7 @@ class GoalsController < ApplicationController
     if @goal.save
       redirect_to current_user
     else
-      #
+      render 'goal/new'
     end
   end
 end
