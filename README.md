@@ -1,24 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+このアプリは、Railsを用いて作成された、読書進捗共有サービスです。ログイン機能の学習を目的として作成されているので、余りに多くの機能が欠けています。
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 主な機能
+ユーザーとしてログインすると、読んだ本とその読了予定日を投稿して共有することができます。
