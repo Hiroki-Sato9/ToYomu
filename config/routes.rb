@@ -9,5 +9,4 @@ Rails.application.routes.draw do
   get "/signup", to: "users#new"
 
   resources :books
-
 end

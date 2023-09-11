@@ -1,12 +1,20 @@
 <header id="header">
-  <%  if logged_in? %>
-  <div>
-    <strong><%= "#{current_user.name}さんがログイン中" %></strong>
-    <%= link_to "Log Out", logout_path, data: { "turbo-method": :delete } %>
-  </div>
-  <% else %>
-    <div>
-    <%= link_to "Log in", login_path %>
-  </div>
-  <% end %>
+  <nav>
+    <ul>
+      <li>
+        <% if logged_in? %>
+          <strong><%= "#{current_user.name}さんがログイン中" %></strong>
+          <%= link_to "Log Out", logout_path, data: { "turbo-method": :delete } %>
+        <% else %>  
+          <%= link_to "Log in", login_path %>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to "みんなが読んでる本", books_path %>
+      </li>
+      <li>
+        <%= link_to(current_user.name, user_path(current_user)) if logged_in?%>
+      </li>
+    </ul>
+  </nav>
  </header>
