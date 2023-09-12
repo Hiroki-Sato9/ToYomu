@@ -7,7 +7,7 @@
   <% if @now_reading %>
     <p>あなたはもうこの本を読み始めています</p>
   <% else %>
-    <%= link_to "この本を読み始める", '#', class: "button" %>
+    <%= link_to "この本を読み始める", new_user_goal_path(current_user), class: "button" %>
   <% end %>
 <% end %>
 

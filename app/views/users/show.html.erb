@@ -5,9 +5,10 @@
   <ul>
     <% @goals.each do |goal| %>
     <li>
+      <%= goal.id %>
       <%= Book.find(goal.book_id).title %>
       <%= goal.date %>
-      <%= link_to "読み終わった", user_goal_path(goal), data: { "turbo-method": :delete,
+      <%= link_to "読み終わった", user_goal_path(current_user, goal), data: { "turbo-method": :delete,
         turbo_confirm: "You sure?" } %>
     </li>
   <% end %>
