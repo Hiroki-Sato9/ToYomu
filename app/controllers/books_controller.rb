@@ -7,6 +7,7 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
+    store_isbn
     @goals = @book.goals
 
     @now_reading = now_reading? ? true : false

@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
       redirect_to login_url, status: :see_other
     end
   end
+
+  def store_isbn
+    session[:isbn_code] = @book.isbn unless @book == nil
+  end
 end

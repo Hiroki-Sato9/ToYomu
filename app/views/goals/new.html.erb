@@ -1,7 +1,7 @@
 
 <%= form_with url: user_goals_url, scope: :goal do |f| %>
   <%= f.label :isbn %>
-  <%= f.text_field :isbn %>
+  <%= f.text_field :isbn, value: @isbn_code %>
 
   <%= f.label :date %>
   <%= f.date_select :date %>

@@ -2,6 +2,8 @@ class GoalsController < ApplicationController
   before_action :logged_in_user
   def new
     @goal = Goal.new
+    @isbn_code = session[:isbn_code] if !(session[:isbn_code] == nil)
+    session[:isbn_code] = nil
   end
 
   def create
@@ -10,7 +12,7 @@ class GoalsController < ApplicationController
     month = params[:goal]["date(2i)"]
     day = params[:goal]["date(3i)"]
     date = Time.zone.parse("#{year}-#{month}-#{day}")
-
+    # p "セッション#{session[:isbn_code]}"
     book = Book.find_by(isbn: params[:goal][:isbn])
     # 本がないとき
     if book.nil?
