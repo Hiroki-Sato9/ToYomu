@@ -24,4 +24,10 @@ class GoalsController < ApplicationController
       render 'goal/new'
     end
   end
+
+  def destroy
+    Goal.find(params[:id]).destroy
+    flash[:success] = "読了おめでとうございます"
+    redirect_to request.referer
+  end
 end

@@ -1,1 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+goal1:
+  user: michael
+  book: bible
+  date: <%= 3.years.ago %>
+
+goal2:
+  user: ichiro
+  book: bible
+  date: <%= Time.zone.now %>

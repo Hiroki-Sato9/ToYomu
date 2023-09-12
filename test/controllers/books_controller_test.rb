@@ -3,7 +3,7 @@ require "test_helper"
 class BooksControllerTest < ActionDispatch::IntegrationTest
   def setup
     @user = users(:michael)
-    @book = books(:bible)
+    @book = books(:other)
     @book.save
   end
 

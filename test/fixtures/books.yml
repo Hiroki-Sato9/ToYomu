@@ -4,3 +4,8 @@ bible:
   title: "Bible"
   author: "Somebody"
   isbn: "Nothing"
+
+other:
+  title: "Other"
+  title: "Somebody"
+  isbn: "siran"
