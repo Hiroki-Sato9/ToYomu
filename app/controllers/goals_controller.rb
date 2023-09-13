@@ -2,6 +2,7 @@ class GoalsController < ApplicationController
   before_action :logged_in_user
   def new
     @goal = Goal.new
+
     @isbn_code = session[:isbn_code] if !(session[:isbn_code] == nil)
     session[:isbn_code] = nil
   end
